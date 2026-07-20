@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="15654776-62a6-4d8f-a4ef-6ed626fb0013" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/v2_camelana/Camelana-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v2_camelana/Camelana-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v2_camelana/Camelana-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v2_camelana/Camelana-SemiBoldItalic.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Verdana Camel Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/v1_verdanacamel/Verdana Camel Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VerdanaCamel-Bold.bf" beforeDir="false" afterPath="$PROJECT_DIR$/v1_verdanacamel/VerdanaCamel-Bold.bf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VerdanaCamel-Bold.sfd" beforeDir="false" afterPath="$PROJECT_DIR$/v1_verdanacamel/VerdanaCamel-Bold.sfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VerdanaCamel.bf" beforeDir="false" afterPath="$PROJECT_DIR$/v1_verdanacamel/VerdanaCamel.bf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VerdanaCamel.html" beforeDir="false" afterPath="$PROJECT_DIR$/v1_verdanacamel/VerdanaCamel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VerdanaCamel.sfd" beforeDir="false" afterPath="$PROJECT_DIR$/v1_verdanacamel/VerdanaCamel.sfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VerdanaCamel.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/v1_verdanacamel/VerdanaCamel.ttf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +27,10 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="18" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -21,9 +39,72 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0001400277129182" />
+      <entry key="S2" value="1.1087811132179293" />
+      <entry key="S5" value="1.4117519538493133" />
+      <entry key="S10" value="1.6456964122351405" />
+      <entry key="S30" value="2.149790789364549" />
+      <entry key="S60" value="3.3970727862013943" />
+      <entry key="M2" value="7.69777012089028" />
+      <entry key="M5" value="24.928099573369728" />
+      <entry key="M10" value="45.59628628435634" />
+      <entry key="M15" value="57.28367654179965" />
+      <entry key="M30" value="72.9177682366159" />
+      <entry key="H1" value="82.66276957849821" />
+      <entry key="H2" value="88.11572786760328" />
+      <entry key="H4" value="91.00171191415336" />
+      <entry key="D1" value="93.49228856684124" />
+      <entry key="W1" value="93.92727132116204" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="4.7752527456484906E-138" />
+      <entry key="S5" value="1.1792300704213277E-55" />
+      <entry key="S10" value="3.4339919487694213E-28" />
+      <entry key="S30" value="7.002714558581939E-10" />
+      <entry key="S60" value="2.6462642646912497E-5" />
+      <entry key="M2" value="0.005144185323927638" />
+      <entry key="M5" value="0.12148611455899243" />
+      <entry key="M10" value="0.34854858278150014" />
+      <entry key="M15" value="0.4952702188310183" />
+      <entry key="M30" value="0.7037543739338439" />
+      <entry key="H1" value="0.8389006937259287" />
+      <entry key="H2" value="0.9159152219097163" />
+      <entry key="H4" value="0.9570345980735087" />
+      <entry key="D1" value="0.9927074315079056" />
+      <entry key="W1" value="0.9989549337114455" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9794202975869268" />
+      <entry key="MS500" value="0.9959888135653103" />
+      <entry key="S2" value="1.1075535926960074" />
+      <entry key="S5" value="1.4110508461955242" />
+      <entry key="S10" value="1.645264748130694" />
+      <entry key="S30" value="2.1495904084944346" />
+      <entry key="S60" value="3.396936123690002" />
+      <entry key="M2" value="7.702672305874468" />
+      <entry key="M5" value="25.048792654934427" />
+      <entry key="M10" value="45.94381440494581" />
+      <entry key="M15" value="57.77800151418468" />
+      <entry key="M30" value="73.62086264958056" />
+      <entry key="H1" value="83.5012797190508" />
+      <entry key="H2" value="89.03143056929564" />
+      <entry key="H4" value="91.9586356504767" />
+      <entry key="D1" value="94.48497685616995" />
+      <entry key="W1" value="94.9262235036349" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectFrameBounds">
     <option name="x" value="580" />
     <option name="width" value="1100" />
@@ -37,12 +118,29 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/efortis/work/verdana-camel",
-    "nodejs_package_manager_path": "npm"
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/efortis/work/verdana-camel/v2_camelana",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/v2_camelana" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/v1_verdanacamel" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,14 +164,36 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1783622945839</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783622945839</updated>
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Tasks" />
     <MESSAGE value="Doc" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="d" />
+    <MESSAGE value="doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc" />
   </component>
 </project>

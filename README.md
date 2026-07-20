@@ -1,4 +1,10 @@
-# VerdanaCamel
+# Camelana (2026 Version)
+[Camelana](./v2_camelana) has a few improvements, and
+it's based on Noto Sans, which is nearly identical to Verdana.
+
+---
+
+## VerdanaCamel (2016 Version)
 
 A proportional sans-serif font with extra left padding in capital case letters. And wider a space glyph.
 
@@ -17,6 +23,7 @@ Here’s a side-by-side with one of the most readable monospace typeface.
 - Ligature for `()`
 - Ligature for `export` (not so fancy as return but more visible)
 - Ligature for `throw` (not so fancy as return but more visible)
+- Ligature for `break` (not so fancy as return but more visible)
 - Ligature for `then` in the bold font (but to make lighter and thinner)
 - Ligature for `this` (smaller)
 - Ligature for `async` and `await` (maybe italic)
@@ -27,7 +34,7 @@ Here’s a side-by-side with one of the most readable monospace typeface.
 
 
 ## Other thoughts
-- Try another font, because this one is too large (byte size). I guess it’s because I naively made the bold font by offsetting the normal one.
+- DONE: ~~Try another font, because this one is too large (byte size). I guess it’s because I naively made the bold font by offsetting the normal one.~~
 - Alternatively, in monospaced fonts, condense capital case letters.
  
  
