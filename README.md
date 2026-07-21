@@ -1,6 +1,8 @@
 # Camelana (2026 Version)
-[Camelana](./v2_camelana) has a few improvements, and
+This new version has a few improvements, and
 it's based on Noto Sans, which is nearly identical to Verdana.
+
+![](./camelana-vs-jetbrains-mono.png)
 
 ---
 
