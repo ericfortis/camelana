@@ -11,7 +11,8 @@ scripts/Noto_Sans/static/NotoSans-*.ttf
 ## 2. Camelize
 This step programmatically:
 - Widens the space char (4x)
-- Adds new uppercase glyphs with `0.33*new_space_width` left padding 
+- Adds new uppercase glyphs with `0.33*new_space_width` left padding. The New glyphs 
+are called the same but with a `.lpad` suffix. 
 - Just for testing, at this point we also create their substitution rule, which is: 
 use the new-padded uppercase glyph when the preceding glyph is a lowercase letter.
 We reinject that same rule later on in **Step 6.**
@@ -54,6 +55,10 @@ will become 1em. And the guideline is the baseline.
 Export it as Plain SVG, and then in FontForge,
 after double-clicking the new slot, File -> Import.
 Tip, it's handy to see the padding distances, View -> Show -> Side Bearings
+
+### Ligature carets
+Add guidelines in the places you want the carets to be placed.
+<img src="doc/lig-carets.png" style="width:500px"/>
 
 
 ## 5. Export TTFs
