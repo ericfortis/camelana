@@ -1,6 +1,7 @@
 # Camelana (2026 Version)
-This new version has a few improvements, and
-it's based on Noto Sans, which is nearly identical to Verdana.
+This new version has a few improvements, and it's based on Noto Sans, 
+which is nearly identical to Verdana. The IDE below uses [Tabular Eye](https://github.com/ericfortis/tabular-eye)
+for rendering the code in columns without adding whitespace.
 
 ![](./camelana-vs-jetbrains-mono.png)
 
@@ -10,7 +11,7 @@ it's based on Noto Sans, which is nearly identical to Verdana.
 
 A proportional sans-serif font with extra left padding in capital case letters. And wider a space glyph.
 
-Here’s a side-by-side with one of the most readable monospace typeface.
+Here’s a side-by-side with one of the most legible monospace typeface.
 ![](./verdana-camel-vs-jetbrains-mono.jpeg)
 
 
