@@ -6,11 +6,13 @@ from fontTools.feaLib.builder import addOpenTypeFeaturesFromString
 # This script was used for the spacing modifications. On the other hand,
 # I used Inkscape and FontForge for drawing and configuring the ligatures.
 
+OUT_DIR = Path('v2_camelana')
 FONT_NAME = 'Camelana'
 SPACE_MULT = 4
 LEFT_PAD_FACTOR = 0.33
+CUSTOM_GLYPHS_EXT = '.lpad'
 
-# Download NotoSans: https://fonts.google.com/noto/specimen/Noto+Sans
+# Download NotoSans
 WEIGHTS = ['Regular', 'SemiBold', 'Italic', 'SemiBoldItalic']
 def font_to_modify(w): return Path(f'Noto_Sans/static/NotoSans-{w}.ttf')
 
@@ -21,12 +23,13 @@ def font_to_modify(w): return Path(f'Noto_Sans/static/NotoSans-{w}.ttf')
 
 def main():
 	for weight in WEIGHTS:
-		out_file = f'{FONT_NAME}-{weight}.ttf'
+		out_file = str(OUT_DIR / f'{FONT_NAME}-{weight}.ttf')
 		font = TTFont(font_to_modify(weight))
 
 		new_space_width = widen_space(font, SPACE_MULT)
 		new_glyphs = inject_new_left_padded_caps_glyphs(font, int(new_space_width * LEFT_PAD_FACTOR))
-		use_padded_cap_when_preceding_glyph_is_lowercase(font, new_glyphs)
+		fea = generate_feature_spec_for_using_padded_cap_when_preceding_glyph_is_lowercase(font, new_glyphs)
+		addOpenTypeFeaturesFromString(font, fea)
 
 		names = {
 			1: FONT_NAME,
@@ -44,7 +47,7 @@ def main():
 		print(out_file)
 
 
-def widen_space(font, factor):
+def widen_space(font, factor) -> float:
 	horizontal_metrics = font['hmtx'].metrics
 	width, lsb = horizontal_metrics['space']
 	new_width = width * factor
@@ -52,17 +55,17 @@ def widen_space(font, factor):
 	return new_width
 
 
-def inject_new_left_padded_caps_glyphs(font, padding):
+def inject_new_left_padded_caps_glyphs(font, padding: int):
 	horizontal_metrics = font['hmtx'].metrics
 	glyf_table = font['glyf']
-	cmap = font.getBestCmap()  # char -> glyph map
+	cmap = font.getBestCmap() # char -> glyph map
 
 	new_glyphs = {}  # original glyph name -> padded glyph name
 	for c in string.ascii_uppercase:
 		glyph_name = cmap.get(ord(c))
 		if not glyph_name or glyph_name not in horizontal_metrics:
 			continue
-		new_name = glyph_name + '.lpad'
+		new_name = glyph_name + CUSTOM_GLYPHS_EXT
 		width, lsb = horizontal_metrics[glyph_name]
 		horizontal_metrics[new_name] = (width + padding, lsb + padding)
 		glyf_table[new_name] = glyf_table[glyph_name]
@@ -72,23 +75,22 @@ def inject_new_left_padded_caps_glyphs(font, padding):
 	return new_glyphs
 
 
-def use_padded_cap_when_preceding_glyph_is_lowercase(font, new_glyphs):
-	# Keep both classes in the same order so positions line up 1:1
-	ordered_originals = sorted(new_glyphs.keys())
-	ordered_padded = [new_glyphs[g] for g in ordered_originals]
+def generate_feature_spec_for_using_padded_cap_when_preceding_glyph_is_lowercase(font, new_glyphs) -> str:
+	originals = sorted(new_glyphs.keys())
+	padded = [new_glyphs[g] for g in originals]
 
 	cmap = font.getBestCmap()
 	lower_names = [cmap[ord(c)] for c in string.ascii_lowercase if ord(c) in cmap]
 
 	lower_class = ' '.join(lower_names)
-	target_class = ' '.join(ordered_originals)
-	sub_class = ' '.join(ordered_padded)
+	target_class = ' '.join(originals)
+	sub_class = ' '.join(padded)
 
-	addOpenTypeFeaturesFromString(font, f"""
+	return f"""
 	feature calt {{
 		sub [{lower_class}] [{target_class}]' by [{sub_class}];
 	}} calt;
-	""")
+	"""
 
 
 if __name__ == '__main__':

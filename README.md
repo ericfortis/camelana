@@ -12,7 +12,7 @@ for rendering the code in columns without adding whitespace.
 A proportional sans-serif font with extra left padding in capital case letters. And wider a space glyph.
 
 Here’s a side-by-side with one of the most legible monospace typeface.
-![](./verdana-camel-vs-jetbrains-mono.jpeg)
+<img src="./verdana-camel-vs-jetbrains-mono.jpeg" style="width:560px" />
 
 
 Modified with [FontForge](https://fontforge.github.io/en-US/).
