@@ -3,7 +3,7 @@
 ## 1. Download Noto Sans
 https://fonts.google.com/noto/specimen/Noto+Sans
 
-Unzip it in this directory, you'll end up with:
+Unzip it in `./scripts/`, so you'll end up with:
 ```sh
 scripts/Noto_Sans/static/NotoSans-*.ttf
 ```
@@ -18,6 +18,7 @@ use the new-padded uppercase glyph when the preceding glyph is a lowercase lette
 We reinject that same rule later on in **Step 6.**
 
 ```sh
+cd scripts
 make setup
 make camelize
 ```
@@ -38,11 +39,11 @@ it's much faster to edit them in a `.fea` file (**Step 6**)
 #### Inserting a new glyph
 FontForge -> Encoding -> Add Encoding Slots
 
-<img src="doc/create-new-slot.png" style="width:300px"/>
+<img src="create-new-slot.png" style="width:300px"/>
 
 Then double-click the last slot, which is now empty.
 
-<img src="doc/new-slot.png" style="width:240px"/>
+<img src="new-slot.png" style="width:240px"/>
 
 It's easier to draw in Inkscape, so there we create
 a 1000x1000px document. Add a guideline at 800px.
@@ -50,7 +51,7 @@ a 1000x1000px document. Add a guideline at 800px.
 What matters is to keep a consistent height, those 1000px
 will become 1em. And the guideline is the baseline.
 
-<img src="doc/inkscape-setup.png" style="width:240px"/>
+<img src="inkscape-setup.png" style="width:240px"/>
 
 Export it as Plain SVG, and then in FontForge,
 after double-clicking the new slot, File -> Import.
@@ -58,13 +59,14 @@ Tip, it's handy to see the padding distances, View -> Show -> Side Bearings
 
 ### Ligature carets
 Add guidelines in the places you want the carets to be placed.
-<img src="doc/lig-carets.png" style="width:500px"/>
+
+<img src="docs/lig-carets.png" style="width:500px"/>
 
 
 ## 5. Export TTFs
 File -> Generate Fonts -> Use these options:
 
-<img src="doc/export.png"/>
+<img src="export.png"/>
 
 
 ## 6. Register ligatures
