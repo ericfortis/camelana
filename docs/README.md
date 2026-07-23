@@ -11,7 +11,7 @@ scripts/Noto_Sans/static/NotoSans-*.ttf
 ## 2. Camelize
 This step programmatically:
 - Widens the space char (4x)
-- Adds new uppercase glyphs with `0.33*new_space_width` left padding. The New glyphs 
+- Adds new uppercase glyphs with `0.33*new_space_width` of left padding. The new glyphs 
 are called the same but with a `.lpad` suffix. 
 - Just for testing, at this point we also create their substitution rule, which is: 
 use the new-padded uppercase glyph when the preceding glyph is a lowercase letter.
@@ -30,14 +30,13 @@ e.g., scale up the `?` `:` chars, and add some padding other chars that look to 
 
 
 ## 4. Draw ligature glyphs
-This is just injecting the new glyphs (not registering them). For the most part, only in 
-the Regular weight. 
+This is just injecting the new glyphs (not registering them). 
 
 Although we can use FontForge to register them,
 it's much faster to edit them in a `.fea` file (**Step 6**)
 
-#### Inserting a new glyph
-FontForge -> Encoding -> Add Encoding Slots
+### Inserting a new glyph
+**FontForge > Encoding > Add Encoding Slots**
 
 <img src="create-new-slot.png" style="width:300px"/>
 
@@ -54,17 +53,17 @@ will become 1em. And the guideline is the baseline.
 <img src="inkscape-setup.png" style="width:240px"/>
 
 Export it as Plain SVG, and then in FontForge,
-after double-clicking the new slot, File -> Import.
-Tip, it's handy to see the padding distances, View -> Show -> Side Bearings
+after double-clicking the new slot, **File > Import**.
+As a tip, it's handy to see the padding distances, View > Show > Side Bearings
 
 ### Ligature carets
 Add guidelines in the places you want the carets to be placed.
 
-<img src="docs/lig-carets.png" style="width:500px"/>
+<img src="lig-carets.png" style="width:500px"/>
 
 
 ## 5. Export TTFs
-File -> Generate Fonts -> Use these options:
+**File > Generate Fonts**, use these options:
 
 <img src="export.png"/>
 
@@ -75,7 +74,7 @@ https://learn.microsoft.com/en-us/typography/opentype/spec/features_ae
 In this folder there is a `.fea` file, which also has the rules
 we added in Step 1 (`calt`). That's mainly because it's easier
 to replace all features than to merge them. Well, merging is easy
-in FontForge -> File -> Merge Feature Info. What's not easy
+in FontForge > File > Merge Feature Info. What's not easy
 is debugging rules that don't merge well. 
 
 ```sh

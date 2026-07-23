@@ -4,7 +4,7 @@ from fontTools.ttLib import TTFont
 from fontTools.feaLib.builder import addOpenTypeFeaturesFromString
 
 # This script was used for the spacing modifications. On the other hand,
-# I used Inkscape and FontForge for drawing and configuring the ligatures.
+# I used Inkscape and FontForge for drawing the ligatures.
 
 OUT_DIR = Path('v2_camelana')
 FONT_NAME = 'Camelana'
@@ -12,9 +12,9 @@ SPACE_MULT = 4
 LEFT_PAD_FACTOR = 0.33
 CUSTOM_GLYPHS_EXT = '.lpad'
 
-# Download NotoSans
-WEIGHTS = ['Regular', 'SemiBold', 'Italic', 'SemiBoldItalic']
+# Download NotoSans and unzip it in this dir
 def font_to_modify(w): return Path(f'Noto_Sans/static/NotoSans-{w}.ttf')
+WEIGHTS = ['Regular', 'SemiBold', 'Italic', 'SemiBoldItalic']
 
 # Acronyms:
 #  HMTX: Horizontal Metrics Table https://learn.microsoft.com/en-us/typography/opentype/spec/hmtx
