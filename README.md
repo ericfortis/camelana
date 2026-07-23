@@ -14,15 +14,14 @@ So to avoid confusion, the normal space glyph is much wider. It takes about
 10 minutes to get used to that extra padding.
 
 Also, `!`, `?`, and `:` are oversized so it's easier to spot them.
-
-`return`, `throw`, and `TODO` have a solid background.
+By the same token, `return`, `throw`, and `TODO` have a solid background.
 
 <img src="docs/demo-ligatures.png" style="width:600px">
 
 
 ### Release notes
 - This new version is based on Noto Sans, which is nearly identical to Verdana.
-- The `return` (and the new `throw`) ligatures are now context aware, so words such as `returned` don't get the replacement.
+- The `return` and the new `throw` ligatures are now context aware, so words such as `returned` don't get the replacement.
 - The left padding on uppercase letters is now context aware, e.g., SCREAMING_CASE identifiers don't get the replacement.
  
 ### Docs

@@ -26,12 +26,11 @@ make camelize
 ## 3. Tweak glyphs 
 Tweak chars that don't look good in code. e.g., 0, 1, brackets, slashes, ?, :
 
-e.g., scale up the `?` `:` chars, and add some padding other chars that look to crowded.
+e.g., scale up the `?` `:` chars, and add some padding other chars that look crowded.
 
 
 ## 4. Draw ligature glyphs
 This is just injecting the new glyphs (not registering them). 
-
 Although we can use FontForge to register them,
 it's much faster to edit them in a `.fea` file (**Step 6**)
 
@@ -54,7 +53,8 @@ will become 1em. And the guideline is the baseline.
 
 Export it as Plain SVG, and then in FontForge,
 after double-clicking the new slot, **File > Import**.
-As a tip, it's handy to see the padding distances, View > Show > Side Bearings
+
+_As a tip, it's handy to see the padding distances, View > Show > Side Bearings_
 
 ### Ligature carets
 Add guidelines in the places you want the carets to be placed.
