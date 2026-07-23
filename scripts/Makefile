@@ -2,7 +2,7 @@ build: clean
 	.venv/bin/python camelize.py
 
 clean:
-	rm -f *.ttf
+	rm -f ../v2_camelana/*.ttf
 
 setup:
 	python3 -m venv .venv
