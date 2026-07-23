@@ -26,7 +26,7 @@ make camelize
 ## 3. Tweak glyphs 
 Tweak chars that don't look good in code. e.g., 0, 1, brackets, slashes, ?, :
 
-e.g., scale up the `?` `:` chars, and add some padding other chars that look crowded.
+e.g., scale up the `?` `:` chars, and add some padding to chars that look crowded.
 
 
 ## 4. Draw ligature glyphs
@@ -44,10 +44,10 @@ Then double-click the last slot, which is now empty.
 <img src="new-slot.png" style="width:240px"/>
 
 It's easier to draw in Inkscape, so there we create
-a 1000x1000px document. Add a guideline at 800px.
+a 1000x1000px document, with a guideline at 800px.
 
 What matters is to keep a consistent height, those 1000px
-will become 1em. And the guideline is the baseline.
+will become 1em. The guideline is the baseline.
 
 <img src="inkscape-setup.png" style="width:240px"/>
 
@@ -60,6 +60,8 @@ _As a tip, it's handy to see the padding distances, View > Show > Side Bearings_
 Add guidelines in the places you want the carets to be placed.
 
 <img src="lig-carets.png" style="width:500px"/>
+
+Export those carets definitions. **Element > Font Info > Lookups > Right-Click any entry > Save Feature File**
 
 
 ## 5. Export TTFs
