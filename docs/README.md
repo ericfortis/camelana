@@ -71,8 +71,8 @@ Add guidelines in the places you want the carets to be placed.
 ## 6. Register ligatures
 https://learn.microsoft.com/en-us/typography/opentype/spec/features_ae
 
-In this folder there is a `.fea` file, which also has the rules
-we added in Step 1 (`calt`). That's mainly because it's easier
+In the scripts folder there is a [Camelana-Regular.fea](../scripts/Camelana-Regular.fea) file,
+which also has the rules we added in Step 1 (`calt`). That's mainly because it's easier
 to replace all features than to merge them. Well, merging is easy
 in FontForge > File > Merge Feature Info. What's not easy
 is debugging rules that don't merge well. 
