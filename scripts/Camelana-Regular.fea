@@ -24,6 +24,8 @@ lookup throw_liga_ctx {
 
 lookup camelanaLigs0 {
   lookupflag 0;
+#    sub \space \space  by \space;
+
     sub \ampersand \ampersand  by \amp_amp.liga;
     sub \equal \equal \equal  by \strict_equal.liga;
     sub \bar \bar  by \or_or.liga;
@@ -35,21 +37,6 @@ lookup camelanaLigs0 {
     sub \hyphen \greater  by \hyphen_greater.liga;
     sub \colon \equal  by \colon_equal.liga;
 } camelanaLigs0;
-
-
-feature liga {
- script DFLT;
-   language dflt;
-   lookup return_liga_ctx;
-   lookup throw_liga_ctx;
-   lookup camelanaLigs0;
-
- script latn;
-   language dflt;
-   lookup return_liga_ctx;
-   lookup throw_liga_ctx;
-   lookup camelanaLigs0;
-} liga;
 
 
 # Ligature Carets Positions
@@ -70,12 +57,10 @@ table GDEF {
 
 
 
-#
 # Contextual Alternates. Replaces uppercases when preceded by a lowercase.
 # They are here again, because in python we just replace all features.
 # On the other hand, FontForge has a "merge feature" action, so there it's not
 # needed because the file already has them.
-#
 
 lookup camelanaCaps0 {
   lookupflag 0;
@@ -86,9 +71,34 @@ lookup camelanaCaps0 {
 	     \P.lpad \Q.lpad \R.lpad \S.lpad \T.lpad \U.lpad \V.lpad \W.lpad \X.lpad \Y.lpad \Z.lpad ];
 } camelanaCaps0;
 
+
+
+##
+## Register all features
+##
+
+feature liga {
+ script DFLT;
+   language dflt;
+   lookup return_liga_ctx;
+   lookup throw_liga_ctx;
+   lookup camelanaLigs0;
+
+ script latn;
+   language dflt;
+   lookup return_liga_ctx;
+   lookup throw_liga_ctx;
+   lookup camelanaLigs0;
+} liga;
+
+
 feature calt {
  script DFLT;
-   language dflt ;
+   language dflt;
+   lookup camelanaCaps0;
+
+  script latn;
+   language dflt;
    lookup camelanaCaps0;
 } calt;
 
